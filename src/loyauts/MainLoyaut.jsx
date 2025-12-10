@@ -5,7 +5,9 @@ function MainLoyaut() {
   return (
     <>
     <Header/>
-      <Outlet />
+     <main className="grow">
+         <Outlet />
+     </main>
       <Footer/>
     </>
   );
