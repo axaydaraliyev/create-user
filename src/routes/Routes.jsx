@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "../pages/Home";
+import Home from "../pages/home/Home";
 import MainLoyaut from "../loyauts/MainLoyaut";
 
 function Routes() {
@@ -10,8 +10,12 @@ function Routes() {
       children: [
         {
           index: true,
-          element: <Home/>,
+          element: <Home />,
         },
+        // {
+        //   path: "create-user", // shu yerda yangi route qo'shiladi
+        //   element: <CreateUser />,
+        // },
       ],
     },
   ]);
