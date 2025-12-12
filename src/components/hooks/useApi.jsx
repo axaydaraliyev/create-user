@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { apiAxios } from "../api/apiAxios";
 
-const useApi = () => {
+
+const UseApi = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const results = async function () {
     setLoading(true);
     try {
-      const respons = await apiAxios({ method: "get", url: "/users" });
+      const respons = await apiAxios({ method: "get", url: "/allUsers" });
+    
+     
+      
       return respons;
     } catch (error) {
       setError(error);
@@ -17,4 +21,4 @@ const useApi = () => {
   };
   return { loading, error, get: () => results() };
 };
-export default useApi;
+export default UseApi;

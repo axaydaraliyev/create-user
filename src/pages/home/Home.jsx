@@ -1,10 +1,12 @@
 import { useEffect } from "react";
-import useApi from "../../components/hooks/useApi";
+import useApi from "../../components/hooks/UseApi";
 
 function Home() {
-  const { loading, error, get } = useApi();
+  const { get, loading, error } = useApi();
   useEffect(() => {
-    get().then(console.log);
+    get().then((data)=>data);
+    console.log(data);
+    
   }, []);
   return <div>Home</div>;
 }
