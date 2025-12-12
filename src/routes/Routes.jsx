@@ -12,10 +12,6 @@ function Routes() {
           index: true,
           element: <Home />,
         },
-        // {
-        //   path: "create-user", // shu yerda yangi route qo'shiladi
-        //   element: <CreateUser />,
-        // },
       ],
     },
   ]);
